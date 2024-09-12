@@ -34,10 +34,10 @@ export async function getBoardById(req, res) {
 }
 
 export async function addBoard(req, res) {
-    const { body: board, loggedinUser } = req
+    const { body: board } = req
 
     try {
-        board.owner = loggedinUser
+        // board.owner = loggedinUser
         const addedBoard = await boardService.add(board)
         res.json(addedBoard)
     } catch (err) {
@@ -47,7 +47,11 @@ export async function addBoard(req, res) {
 }
 
 export async function updateBoard(req, res) {
-    const { body: board } = req
+    const board = req.body
+   console.log(' req.body:',  req.body)
+    // const { board } = req.body
+    // console.log('board:', board)
+    // console.log('board._id:', board)
     // const { _id: userId, isAdmin } = loggedinUser
 
     // if (!isAdmin && board.owner._id !== userId) {
@@ -57,6 +61,7 @@ export async function updateBoard(req, res) {
 
     try {
         const updatedBoard = await boardService.update(board)
+        // console.log('board:', board)
         res.json(updatedBoard)
     } catch (err) {
         logger.error('Failed to update board', err)
