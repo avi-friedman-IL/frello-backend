@@ -26,9 +26,9 @@ async function query(filterBy = { txt: '' }) {
         const collection = await dbService.getCollection('board')
         var boardCursor = await collection.find(criteria, { sort })
 
-        if (filterBy.pageIdx !== undefined) {
-            boardCursor.skip(filterBy.pageIdx * PAGE_SIZE).limit(PAGE_SIZE)
-        }
+        // if (filterBy.pageIdx !== undefined) {
+        //     boardCursor.skip(filterBy.pageIdx * PAGE_SIZE).limit(PAGE_SIZE)
+        // }
 
         const boards = boardCursor.toArray()
         return boards
