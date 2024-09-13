@@ -1,0 +1,1789 @@
+
+{
+    "title": "mongo DB",
+    "isStarred": false,
+    "archivedAt": 1589983468418,
+    "createdBy": {
+      "id": "u101",
+      "fullname": "Abi Abambi",
+      "imgUrl": "http://some-img"
+    },
+    "style": {
+      "backgroundImage": "https://cdn.pixabay.com/photo/2024/03/04/14/56/pagoda-8612554_1280.jpg"
+    },
+    "members": [
+      {
+        "id": "u101",
+        "fullname": "Natia ",
+        "imgUrl": "https://www.google.com",
+        "color": "#61bd4f"
+      },
+      {
+        "id": "u102",
+        "fullname": "Avi",
+        "imgUrl": "https://www.google.com",
+        "color": "#f2d600"
+      },
+      {
+        "id": "u103",
+        "fullname": "Yana",
+        "imgUrl": "https://www.google.com",
+        "color": "#f3a600"
+      }
+    ],
+    "groups": [
+      {
+        "id": "g102",
+        "title": "Development Phase",
+        "archivedAt": null,
+        "tasks": [
+          {
+            "id": "c111",
+            "title": "Set up development environment",
+            "labels": [
+              {
+                "id": "C8h9wx",
+                "title": "",
+                "color": "#FFAB4A",
+                "colorName": "",
+                "isEditable": true
+              },
+              {
+                "id": "qdtpYT",
+                "title": "",
+                "color": "#D5F0EC",
+                "colorName": "",
+                "isEditable": true
+              }
+            ],
+            "description": "",
+            "checklists": [
+              {
+                "id": "2cyZ0M",
+                "title": "checklist",
+                "items": [
+                  {
+                    "id": "JQBnWg",
+                    "text": "ff",
+                    "isChecked": true
+                  }
+                ],
+                "isAddingItem": false
+              },
+              {
+                "id": "V8x0QM",
+                "title": "checklist",
+                "items": []
+              }
+            ],
+            "members": [
+              {
+                "id": "u101",
+                "fullname": "Natia ",
+                "imgUrl": "https://www.google.com",
+                "color": "#61bd4f"
+              },
+              {
+                "id": "u103",
+                "fullname": "Yana",
+                "imgUrl": "https://www.google.com",
+                "color": "#f3a600"
+              }
+            ],
+            "attachments": [],
+            "comments": [
+              "Install all necessary tools",
+              "Ensure compatibility with the latest tech stack"
+            ],
+            "cover": {
+              "0": "c",
+              "1": "o",
+              "2": "v",
+              "3": "e",
+              "4": "r",
+              "5": "_",
+              "6": "d",
+              "7": "e",
+              "8": "v",
+              "9": "_",
+              "10": "e",
+              "11": "n",
+              "12": "v",
+              "13": ".",
+              "14": "p",
+              "15": "n",
+              "16": "g",
+              "color": "#ffedcc",
+              "img": "https://cdn.pixabay.com/photo/2024/08/01/10/18/bird-8936789_1280.jpg"
+            },
+            "dueDate": {
+              "date": "2024-09-17",
+              "time": "10:13",
+              "isComplete": false,
+              "reminder": "",
+              "createdAt": "",
+              "completedAt": null,
+              "isOverdue": false
+            }
+          },
+          {
+            "id": "sPaBex",
+            "title": "Add dark mode toggle for the application\n",
+            "labels": [
+              {
+                "id": "DEZrXP",
+                "title": "",
+                "color": "#FF80CE",
+                "colorName": "",
+                "isEditable": true
+              }
+            ],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "FalkOL",
+            "title": "Improve mobile responsiveness for all views\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "8mEUPK",
+            "title": "Set up error tracking with Sentry\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "N72nDZ",
+            "title": "Create unit tests for board management components\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          }
+        ],
+        "style": {}
+      },
+      {
+        "id": "g103",
+        "title": "Testing Phase",
+        "archivedAt": null,
+        "tasks": [
+          {
+            "id": "c113",
+            "title": "Write unit tests",
+            "description": "Create unit tests for the core functionalities of the application.",
+            "checklists": [],
+            "members": [
+              {
+                "id": "u101",
+                "fullname": "Natia ",
+                "imgUrl": "https://www.google.com",
+                "color": "#61bd4f"
+              }
+            ],
+            "attachments": "",
+            "comments": [
+              "Focus on critical paths",
+              "Ensure all edge cases are covered"
+            ],
+            "cover": {
+              "0": "c",
+              "1": "o",
+              "2": "v",
+              "3": "e",
+              "4": "r",
+              "5": "_",
+              "6": "u",
+              "7": "n",
+              "8": "i",
+              "9": "t",
+              "10": "_",
+              "11": "t",
+              "12": "e",
+              "13": "s",
+              "14": "t",
+              "15": "s",
+              "16": ".",
+              "17": "p",
+              "18": "n",
+              "19": "g",
+              "color": "#ffedcc",
+              "img": "https://cdn.pixabay.com/photo/2024/08/01/10/18/bird-8936789_1280.jpg"
+            },
+            "dueDate": "2024-09-10"
+          },
+          {
+            "id": "c114",
+            "title": "Perform integration testing",
+            "description": "Test the integration of different modules to ensure they work together as expected.",
+            "checklists": [],
+            "members": [
+              {
+                "id": "u101",
+                "fullname": "Natia ",
+                "imgUrl": "https://www.google.com",
+                "color": "#61bd4f"
+              }
+            ],
+            "attachments": "",
+            "comments": [
+              "Verify module interactions",
+              "Check for data consistency"
+            ],
+            "cover": "cover_integration_testing.png",
+            "dueDate": "2024-09-15"
+          },
+          {
+            "id": "q4i6HO",
+            "title": "Integrate notifications system for task updates\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "l2AWzO",
+            "title": "Implement offline mode with local storage sync\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          }
+        ]
+      },
+      {
+        "id": "GxJw6Q",
+        "title": "Frontend Development",
+        "tasks": [
+          {
+            "id": "ef5i54",
+            "title": "Implement drag-and-drop feature for task cards",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "qUymTx",
+            "title": "Design the login and signup screens\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "Hm9KgI",
+            "title": "Optimize board rendering performance\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "N4ZDLb",
+            "title": "Integrate OAuth for third-party login\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "xSUZuF",
+            "title": "Test cross-browser compatibility\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "oWv46P",
+            "title": "Conduct user interviews for feedback on new features\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "MSnlKS",
+            "title": "Create RESTful API for board management\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "SZY7Pq",
+            "title": "Fix bugs in task filtering functionality\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "wCGi6c",
+            "title": "Set up continuous integration (CI) pipeline\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          }
+        ],
+        "style": {}
+      },
+      {
+        "id": "6udus3",
+        "title": "Backend Development\n",
+        "tasks": [
+          {
+            "id": "1sJzxh",
+            "title": "Enhance data encryption for user information\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "hBssjX",
+            "title": "Implement real-time updates with WebSockets\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "HeAXE6",
+            "title": "Refactor task card component for better reusability\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          },
+          {
+            "id": "vxFbWF",
+            "title": "Develop color-coded labels for task categorization\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          }
+        ],
+        "style": {}
+      },
+      {
+        "id": "aeGJMU",
+        "title": "User Interface (UI) Design\n",
+        "tasks": [
+          {
+            "id": "zlLPUw",
+            "title": "Implement search functionality for boards and tasks\n",
+            "labels": [],
+            "members": [],
+            "attachments": [],
+            "comments": [],
+            "cover": "",
+            "dueDate": ""
+          }
+        ],
+        "style": {}
+      }
+    ],
+    "activities": [
+      {
+        "id": "XBNi4m",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952090994,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "aeGJMU",
+          "title": "User Interface (UI) Design\n"
+        },
+        "task": {
+          "id": "zlLPUw",
+          "title": "Implement search functionality for boards and tasks\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "okbsSc",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725952078493,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "aeGJMU",
+          "title": "User Interface (UI) Design\n"
+        },
+        "task": {
+          "id": "xYrQml",
+          "title": ""
+        },
+        "taskNumber": 23,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "Md4T7T",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952070179,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "N72nDZ",
+          "title": "Create unit tests for board management components\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "NcYJXX",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952061036,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "8mEUPK",
+          "title": "Set up error tracking with Sentry\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "GXqCCz",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952049123,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "FalkOL",
+          "title": "Improve mobile responsiveness for all views\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "ho1rei",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952038839,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "sPaBex",
+          "title": "Add dark mode toggle for the application\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "PINGwQ",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952026987,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g103",
+          "title": "Testing Phase"
+        },
+        "task": {
+          "id": "l2AWzO",
+          "title": "Implement offline mode with local storage sync\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "L0KyOd",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952018092,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g103",
+          "title": "Testing Phase"
+        },
+        "task": {
+          "id": "q4i6HO",
+          "title": "Integrate notifications system for task updates\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "sDFh9u",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725952007176,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {
+          "id": "vxFbWF",
+          "title": "Develop color-coded labels for task categorization\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "4spWks",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951996098,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {
+          "id": "HeAXE6",
+          "title": "Refactor task card component for better reusability\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "3Ezmsw",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951985103,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {
+          "id": "hBssjX",
+          "title": "Implement real-time updates with WebSockets\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "kqfDHR",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725951941042,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {
+          "id": "LMDJ4v",
+          "title": ""
+        },
+        "taskNumber": 13,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "xTPiH1",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951937066,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {
+          "id": "1sJzxh",
+          "title": "Enhance data encryption for user information\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "qyXLOq",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951924125,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "wCGi6c",
+          "title": "Set up continuous integration (CI) pipeline\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "zFGJM5",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951914708,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "SZY7Pq",
+          "title": "Fix bugs in task filtering functionality\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "USW3cA",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951904470,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "MSnlKS",
+          "title": "Create RESTful API for board management\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "5l21SY",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951891286,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "oWv46P",
+          "title": "Conduct user interviews for feedback on new features\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "7CXO2j",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951880642,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "xSUZuF",
+          "title": "Test cross-browser compatibility\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "VHiQ8j",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951871533,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "N4ZDLb",
+          "title": "Integrate OAuth for third-party login\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "p1ZJc8",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951858898,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "Hm9KgI",
+          "title": "Optimize board rendering performance\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "mWeuuq",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725951847634,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {
+          "id": "qUymTx",
+          "title": "Design the login and signup screens\n"
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "5NhoM6",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725951803391,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "xhfQlW",
+          "title": "demo"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "86zFVB",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725951799404,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "rgQrT7",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725951795371,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "vz7s8l",
+          "title": ""
+        },
+        "taskNumber": 2,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "PukCxq",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725951792335,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "DlhhcV",
+          "title": ""
+        },
+        "taskNumber": 2,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "1z6hiW",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725951788820,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "Cw9DP4",
+          "title": ""
+        },
+        "taskNumber": 2,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "jSg3xl",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725951765457,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "aeGJMU",
+          "title": "User Interface (UI) Design\n"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "0oHkmc",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725951726354,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "6udus3",
+          "title": "Backend Development\n"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "L3fRfV",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725951709167,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "GxJw6Q",
+          "title": "Frontend Development"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "NsSZmE",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725915856419,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "vz7s8l",
+          "title": ""
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "ArQxT7",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725915853608,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "DlhhcV",
+          "title": ""
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "BeDhRR",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725909828147,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "xhfQlW",
+          "title": "demo"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "Y22obK",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725909759017,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g103",
+          "title": "Testing Phase"
+        },
+        "task": {
+          "id": "jfNpWa",
+          "title": ""
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "swUhqG",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725896843124,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "CvcstI",
+        "title": "",
+        "type": "deleteTask",
+        "createdAt": 1725827971355,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "keh2HE",
+          "title": ""
+        },
+        "taskNumber": 16,
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "bub7u3",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725827964044,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {
+          "id": "keh2HE",
+          "title": ""
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "PNz5KB",
+        "title": "",
+        "type": "completeChecklistItem",
+        "createdAt": 1725827242040,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "c111",
+          "title": "Set up development environment"
+        },
+        "taskNumber": "",
+        "checklist": {},
+        "item": {
+          "id": "JQBnWg",
+          "text": "ff",
+          "isChecked": true
+        },
+        "dueDate": {}
+      },
+      {
+        "id": "AoBB1U",
+        "title": "",
+        "type": "addChecklist",
+        "createdAt": 1725827234689,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "c111",
+          "title": "Set up development environment"
+        },
+        "checklist": {
+          "id": "V8x0QM",
+          "title": "checklist"
+        },
+        "dueDate": {}
+      },
+      {
+        "id": "mWJhEU",
+        "title": "",
+        "type": "addChecklist",
+        "createdAt": 1725827231185,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g102",
+          "title": "Development Phase"
+        },
+        "task": {
+          "id": "c111",
+          "title": "Set up development environment"
+        },
+        "checklist": {
+          "id": "2cyZ0M",
+          "title": "checklist"
+        },
+        "dueDate": {}
+      },
+      {
+        "id": "QIS71H",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725816352114,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "XRwqe7",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "ODCvxU",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725816337910,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "JZpZze",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "C86TPX",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725816335252,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "m8Szcm",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "uSKQRm",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725816314503,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "m8Szcm",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "Hx46RD",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725816279286,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "JZpZze",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "mQcOvE",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725813641419,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "zkrSpA",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "8cJCBx",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725813639175,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "ue1izU",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "VXQGZS",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725813468935,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "ue1izU",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "SgRYn0",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725813421570,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "zkrSpA",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "2JKRVe",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725812214358,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g104",
+          "title": "Deployment Phase"
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "BC1Whf",
+        "title": "",
+        "type": "deleteGroup",
+        "createdAt": 1725812161746,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "OdKfOr",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "hSxnCJ",
+        "title": "",
+        "type": "addTask",
+        "createdAt": 1725809167379,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g103",
+          "title": "Testing Phase"
+        },
+        "task": {
+          "id": "rusIIG",
+          "title": ""
+        },
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "4xLu9U",
+        "title": "",
+        "type": "addGroup",
+        "createdAt": 1725809149480,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "OdKfOr",
+          "title": ""
+        },
+        "task": {},
+        "checklist": {},
+        "dueDate": {}
+      },
+      {
+        "id": "a112",
+        "title": "deleted list group-title",
+        "type": "deleteGroup",
+        "createdAt": 154514,
+        "byMember": {
+          "id": "u102",
+          "fullname": "Avi",
+          "imgUrl": "http://some-img",
+          "color": "#f2d600"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        }
+      },
+      {
+        "id": "a111",
+        "title": "deleted card #4 from group-title",
+        "type": "deleteTask",
+        "createdAt": 154514,
+        "byMember": {
+          "id": "u102",
+          "fullname": "Avi",
+          "imgUrl": "http://some-img",
+          "color": "#f2d600"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        }
+      },
+      {
+        "id": "a110",
+        "title": "removed checklist-title",
+        "type": "deleteChecklist",
+        "createdAt": 154514,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Natia",
+          "imgUrl": "http://some-img",
+          "color": "#61bd4f"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        },
+        "checklist": {
+          "id": "ck101",
+          "title": "Design Process"
+        }
+      },
+      {
+        "id": "a109",
+        "title": "set task-title to be task-due-date",
+        "type": "setDueDate",
+        "createdAt": 154514,
+        "byMember": {
+          "id": "u103",
+          "fullname": "Yana",
+          "imgUrl": "http://some-img",
+          "color": "#f3a600"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        },
+        "dueDate": {
+          "date": "2024-09-04",
+          "time": "01:02"
+        }
+      },
+      {
+        "id": "a101",
+        "title": "complete checklist-item-text on task-title",
+        "type": "completeChecklistItem",
+        "createdAt": 154514,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Natia",
+          "imgUrl": "http://some-img",
+          "color": "#61bd4f"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        },
+        "checklist": {
+          "id": "ck101",
+          "title": "Design Process"
+        },
+        "item": {
+          "id": "item101",
+          "text": "Gather requirements from the team"
+        }
+      },
+      {
+        "id": "a102",
+        "title": "added checklistt-title to group-title",
+        "type": "addChecklist",
+        "createdAt": 154520,
+        "byMember": {
+          "id": "u102",
+          "fullname": "Avi",
+          "imgUrl": "http://some-img",
+          "color": "#f2d600"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        },
+        "checklist": {
+          "id": "chk101",
+          "title": "colors"
+        }
+      },
+      {
+        "id": "a104",
+        "title": "added task-title to group-title",
+        "type": "addTask",
+        "createdAt": 154540,
+        "byMember": {
+          "id": "u101",
+          "fullname": "Natia",
+          "imgUrl": "http://some-img",
+          "color": "#61bd4f"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        }
+      },
+      {
+        "id": "a103",
+        "title": "added group-title",
+        "type": "addGroup",
+        "createdAt": 154530,
+        "byMember": {
+          "id": "u103",
+          "fullname": "Yana",
+          "imgUrl": "http://some-img",
+          "color": "#f3a600"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        }
+      },
+      {
+        "id": "a108",
+        "title": "added this board to",
+        "type": "addBoard",
+        "createdAt": "Date.now()",
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        }
+      },
+      {
+        "id": "a107",
+        "title": "created this board",
+        "type": "createBoard",
+        "createdAt": "Date.now()",
+        "byMember": {
+          "id": "u101",
+          "fullname": "Abi Abambi",
+          "imgUrl": "http://some-img",
+          "color": "#000"
+        },
+        "group": {
+          "id": "g101",
+          "title": "Design Phase"
+        },
+        "task": {
+          "id": "c101",
+          "title": "Design wireframes"
+        }
+      }
+    ],
+    "createdAt": "2024-09-08T06:48:51.000Z",
+    "labels": [
+      {
+        "id": "DEZrXP",
+        "title": "",
+        "color": "#FF80CE",
+        "colorName": "",
+        "isEditable": true
+      },
+      {
+        "id": "QQp7fq",
+        "title": "",
+        "color": "#1F8A9D",
+        "colorName": "",
+        "isEditable": true
+      },
+      {
+        "id": "GR79go",
+        "title": "",
+        "color": "#CF513D",
+        "colorName": "",
+        "isEditable": true
+      },
+      {
+        "id": "qdtpYT",
+        "title": "",
+        "color": "#D5F0EC",
+        "colorName": "",
+        "isEditable": true
+      },
+      {}
+    ]
+  }
