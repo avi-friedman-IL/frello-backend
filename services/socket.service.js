@@ -19,7 +19,14 @@ export function setupSocketAPI(http) {
         socket.on('mouseMove', mouseData => {
             const { boardId, x, y } = mouseData
             const cursorData = { id: socket.id, x, y }
-            gIo.to(boardId).emit('mouseMove', cursorData)
+            // gIo.to(boardId).emit('mouseMove', cursorData)
+
+            broadcast({
+                type: 'mouseMove',
+                data: cursorData,
+                userId: socket.id,
+                room: boardId,
+            })
         })
         socket.on('set-user-socket', userId => {
             console.log(
