@@ -1,4 +1,5 @@
 import { logger } from '../../services/logger.service.js'
+import { socketService } from '../../services/socket.service.js'
 import { boardService } from './board.service.js'
 
 export async function getBoards(req, res) {
@@ -21,7 +22,6 @@ export async function getBoardById(req, res) {
         noLabels: req.query.noLabels || false,
         selectMembers: req.query.selectMember || [],
         selectLabels: req.query.selectLabel || [],
-
     }
     try {
         const boardId = req.params.id
@@ -48,26 +48,45 @@ export async function addBoard(req, res) {
 
 export async function updateBoard(req, res) {
     const board = req.body
-   console.log(' req.body:',  req.body)
-    // const { board } = req.body
-    // console.log('board:', board)
-    // console.log('board._id:', board)
-    // const { _id: userId, isAdmin } = loggedinUser
-
-    // if (!isAdmin && board.owner._id !== userId) {
-    //     res.status(403).send('Not your board...')
-    //     return
-    // }
-
+    const userId = req.user ? req.user._id : 'defaultUserId'
     try {
         const updatedBoard = await boardService.update(board)
-        // console.log('board:', board)
+        console.log(updatedBoard)
+        socketService.broadcast({
+            type: 'groupsUpdated',
+            data: updatedBoard.groups,
+            userId: userId,
+            room: board._id,
+        })
         res.json(updatedBoard)
     } catch (err) {
         logger.error('Failed to update board', err)
         res.status(400).send({ err: 'Failed to update board' })
     }
 }
+
+// export async function updateBoard(req, res) {
+//     const board = req.body
+//    console.log(' req.body:',  req.body)
+//     // const { board } = req.body
+//     // console.log('board:', board)
+//     // console.log('board._id:', board)
+//     // const { _id: userId, isAdmin } = loggedinUser
+
+//     // if (!isAdmin && board.owner._id !== userId) {
+//     //     res.status(403).send('Not your board...')
+//     //     return
+//     // }
+
+//     try {
+//         const updatedBoard = await boardService.update(board)
+//         // console.log('board:', board)
+//         res.json(updatedBoard)
+//     } catch (err) {
+//         logger.error('Failed to update board', err)
+//         res.status(400).send({ err: 'Failed to update board' })
+//     }
+// }
 
 export async function removeBoard(req, res) {
     try {
