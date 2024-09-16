@@ -50,7 +50,7 @@ export async function updateBoard(req, res) {
 
   const userId = req.user ? req.user._id : "defaultUserId";
   try {
-    const updatedBoard = await boardService.update(board);
+    const updatedBoard = await boardService.update(board)
     console.log(updatedBoard);
 
     socketService.broadcast({
