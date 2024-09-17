@@ -8,8 +8,8 @@ if (process.env.NODE_ENV === 'production') {
   config = configProd
   // config = configDev
 } else {
-  config = configProd
-  // config = configDev
+  // config = configProd
+  config = configDev
 }
 config.isGuestMode = true
 
