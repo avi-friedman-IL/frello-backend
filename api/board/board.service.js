@@ -50,7 +50,7 @@ async function getById(boardId, filterBy) {
             const regex = new RegExp(filterBy.txt, 'i')
             board.groups = board.groups.filter(
                 group => group.title.match(regex)
-                 ||group.tasks.some(task => task.title.match(regex))
+                    || group.tasks.some(task => task.title.match(regex))
             )
         }
         if (filterBy.noMembers === 'true') {
@@ -79,7 +79,7 @@ async function getById(boardId, filterBy) {
             board.groups = board.groups.map(group => {
                 group.tasks = group.tasks?.filter(task =>
                     task.members.some(member =>
-                        filterBy.selectMembers.includes(member.id)
+                        filterBy.selectMembers.includes(member._id)
                     )
                 )
                 return group
@@ -137,7 +137,7 @@ async function add(board) {
 }
 
 async function update(board) {
-    const boardToSave = {...board}
+    const boardToSave = { ...board }
 
     try {
         const criteria = { _id: mongoId(board._id) }
