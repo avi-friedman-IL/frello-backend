@@ -46,62 +46,74 @@ async function getById(boardId, filterBy) {
         const criteria = { _id: mongoId(boardId) }
         const board = await collection.findOne(criteria)
 
+        // Duplicate the board to avoid mutating the original object
+        let filteredBoard = { ...board }
+
+        // Filter by text
         if (filterBy.txt) {
             const regex = new RegExp(filterBy.txt, 'i')
-            board.groups = board.groups.filter(
-                group => group.title.match(regex)
-                    || group.tasks.some(task => task.title.match(regex))
+            filteredBoard.groups = filteredBoard.groups.filter(
+                group =>
+                    group.title.match(regex) ||
+                    group.tasks.some(task => task.title.match(regex))
             )
         }
+
+        // Filter tasks with no members
         if (filterBy.noMembers === 'true') {
-            board.groups = board.groups.map(group => {
-                group.tasks = group.tasks?.filter(
-                    task => task.members.length === 0
-                )
-                return group
-            })
+            filteredBoard.groups = filteredBoard.groups.map(group => ({
+                ...group,
+                tasks: group.tasks.filter(task => task.members.length === 0),
+            }))
         }
+
+        // Filter tasks with no due date
         if (filterBy.noDueDate === 'true') {
-            board.groups = board.groups.map(group => {
-                group.tasks = group.tasks?.filter(task => task.dueDate === '')
-                return group
-            })
+            filteredBoard.groups = filteredBoard.groups.map(group => ({
+                ...group,
+                tasks: group.tasks.filter(task => !task.dueDate),
+            }))
         }
+
+        // Filter tasks with no labels
         if (filterBy.noLabels === 'true') {
-            board.groups = board.groups.map(group => {
-                group.tasks = group.tasks?.filter(
-                    task => task.labels?.length === 0
-                )
-                return group
-            })
+            filteredBoard.groups = filteredBoard.groups.map(group => ({
+                ...group,
+                tasks: group.tasks.filter(task => task.labels?.length === 0),
+            }))
         }
+
+        // Filter tasks by selected members
         if (filterBy.selectMembers.length > 0) {
-            board.groups = board.groups.map(group => {
-                group.tasks = group.tasks?.filter(task =>
+            filteredBoard.groups = filteredBoard.groups.map(group => ({
+                ...group,
+                tasks: group.tasks.filter(task =>
                     task.members.some(member =>
                         filterBy.selectMembers.includes(member._id)
                     )
-                )
-                return group
-            })
-        }
-        if (filterBy.selectLabels.length > 0) {
-            board.groups = board.groups.map(group => {
-                group.tasks = group.tasks?.filter(task =>
-                    task.labels?.some(label =>
-                        filterBy.selectLabels.includes(label.color)
-                    )
-                )
-                return group
-            })
+                ),
+            }))
         }
 
-        return board
+        // Filter tasks by selected labels
+        if (filterBy.selectLabels.length > 0) {
+            filteredBoard.groups = filteredBoard.groups.map(group => ({
+                ...group,
+                tasks: group.tasks.filter(task =>
+                    task.labels.some(label =>
+                        filterBy.selectLabels.includes(label.color)
+                    )
+                ),
+            }))
+        }
+
+        return filteredBoard
     } catch (err) {
         logger.error(`while finding board ${boardId}`, err)
         throw err
     }
 }
+
 
 async function remove(boardId) {
     // const { loggedinUser } = asyncLocalStorage.getStore()
