@@ -49,6 +49,7 @@ export async function addBoard(req, res) {
 export async function updateBoard(req, res) {
     const board = req.body
     const userId = req.user ? req.user._id : 'defaultUserId'
+    console.log(userId)
     try {
         const updatedBoard = await boardService.update(board)
         socketService.broadcast({

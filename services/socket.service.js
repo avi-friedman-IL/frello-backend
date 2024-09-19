@@ -20,23 +20,30 @@ export function setupSocketAPI(http) {
     });
 
     // Join a specific board (room)
-    socket.on("joinBoard", (boardId) => {
+    socket.on("joinBoard", ({ boardId, currUser }) => {
       socket.join(boardId);
       socket.myBoard = boardId;
-      console.log(`Socket ${socket.id} joined board ${boardId}`);
+      socket.userId = currUser._id;
+      socket.fullname = currUser.fullname;
+      console.log(`Socket ${socket.id}joined board ${boardId}`);
     });
 
     // Leave the board (room)
     socket.on("leaveBoard", (boardId) => {
       socket.leave(boardId);
       console.log(`Socket ${socket.id} left board ${boardId}`);
-      broadcast({ type: "userLeft", data: { id: socket.id }, room: boardId, userId: socket.id });
+      broadcast({
+        type: "userLeft",
+        data: { id: socket.id },
+        room: boardId,
+        userId: socket.id,
+      });
     });
 
     // Handle mouse movement event
     socket.on("mouseMove", (mouseData) => {
       const { boardId, x, y } = mouseData;
-      const cursorData = { id: socket.id, x, y };
+      const cursorData = { id: socket.id, fullname: socket.fullname, x, y };
 
       broadcast({
         type: "mouseMove",
@@ -48,7 +55,9 @@ export function setupSocketAPI(http) {
 
     // Set user ID for the socket
     socket.on("set-user-socket", (userId) => {
-      console.log(`Setting socket.userId = ${userId} for socket [id: ${socket.id}]`);
+      console.log(
+        `Setting socket.userId = ${userId} for socket [id: ${socket.id}]`
+      );
       socket.userId = userId;
     });
 
@@ -64,20 +73,26 @@ export function setupSocketAPI(http) {
       if (socket.myTopic === topic) return;
       if (socket.myTopic) {
         socket.leave(socket.myTopic);
-        logger.info(`Socket is leaving topic ${socket.myTopic} [id: ${socket.id}]`);
+        logger.info(
+          `Socket is leaving topic ${socket.myTopic} [id: ${socket.id}]`
+        );
       }
       socket.join(topic);
       socket.myTopic = topic;
     });
 
     socket.on("chat-send-msg", (msg) => {
-      logger.info(`New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`);
+      logger.info(
+        `New chat msg from socket [id: ${socket.id}], emitting to topic ${socket.myTopic}`
+      );
       gIo.to(socket.myTopic).emit("chat-add-msg", msg);
     });
 
     // Watch user events
     socket.on("user-watch", (userId) => {
-      logger.info(`user-watch from socket [id: ${socket.id}], on user ${userId}`);
+      logger.info(
+        `user-watch from socket [id: ${socket.id}], on user ${userId}`
+      );
       socket.join("watching:" + userId);
     });
 
@@ -100,7 +115,9 @@ async function emitToUser({ type, data, userId }) {
   userId = userId.toString();
   const socket = await _getUserSocket(userId);
   if (socket) {
-    logger.info(`Emitting event: ${type} to user: ${userId} socket [id: ${socket.id}]`);
+    logger.info(
+      `Emitting event: ${type} to user: ${userId} socket [id: ${socket.id}]`
+    );
     socket.emit(type, data);
   } else {
     logger.info(`No active socket for user: ${userId}`);
@@ -160,7 +177,6 @@ export const socketService = {
   broadcast,
 };
 
-
 // import { logger } from "./logger.service.js";
 // import { Server } from "socket.io";
 // var gIo = null;
@@ -170,7 +186,6 @@ export const socketService = {
 //       origin: "*",
 //     },
 //   });
-
 
 //   gIo.on("connection", (socket) => {
 //    logger.info(`New connected socket [id: ${socket.id}]`);
@@ -191,15 +206,13 @@ export const socketService = {
 //     socket.on("leaveBoard", (boardId) => {
 //       socket.leave(boardId);
 //       console.log(`Socket ${socket.id} left board ${boardId}`);
-     
+
 //       broadcast({ type: "userLeft", data: { id: socket.id }, room: boardId, userId: socket.id });
 //     });
-    
 
 //     socket.on("mouseMove", (mouseData) => {
 //       const { boardId, x, y } = mouseData;
 //       const cursorData = { id: socket.id, x, y };
-      
 
 //       broadcast({
 //         type: "mouseMove",
@@ -310,4 +323,3 @@ export const socketService = {
 //   emitToUser,
 //   broadcast,
 // };
-
