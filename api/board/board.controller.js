@@ -58,6 +58,12 @@ export async function updateBoard(req, res) {
             userId: userId,
             room: board._id,
         })
+        socketService.broadcast({
+            type: 'activitiesUpdated',
+            data: updatedBoard.activities,
+            userId: userId,
+            room: board._id,
+        })
         res.json(updatedBoard)
     } catch (err) {
         logger.error('Failed to update board', err)
