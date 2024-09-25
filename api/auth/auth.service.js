@@ -31,8 +31,7 @@ async function login(username, password) {
 async function googleLogin(token) {
     const ticket = await client.verifyIdToken({
         idToken: token,
-        audience:
-            '922679906339-r3kj2mljtkelfcijme0kmclt1al1nfrk.apps.googleusercontent.com', // הכנס את ה-client_id שלך
+        audience:process.env.CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
     })
     const payload = ticket.getPayload()
     const users = await userService.query()
