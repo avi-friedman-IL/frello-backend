@@ -3,6 +3,9 @@ import path from 'path'
 import cors from 'cors'
 import express from 'express'
 import cookieParser from 'cookie-parser'
+import session from 'express-session'
+import passport from 'passport'
+import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 
 import { authRoutes } from './api/auth/auth.routes.js'
 import { userRoutes } from './api/user/user.routes.js'
@@ -18,6 +21,39 @@ const server = http.createServer(app)
 // Express App Config
 app.use(cookieParser())
 app.use(express.json())
+
+app.use(
+    session({
+        secret: 'some secret',
+        resave: false,
+        saveUninitialized: true,
+    })
+)
+
+app.use(passport.initialize())
+app.use(passport.session())
+
+passport.use(
+    new GoogleStrategy(
+        {
+            clientID:
+                '922679906339-r3kj2mljtkelfcijme0kmclt1al1nfrk.apps.googleusercontent.com',
+            clientSecret: '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',
+            callbackURL: 'http://localhost:5173/auth/google/callback',
+        },
+        (accessToken, refreshToken, profile, done) => {
+            return done(null, profile)
+        }
+    )
+)
+
+passport.serializeUser((user, done) => {
+    done(null, user)
+})
+
+passport.deserializeUser((user, done) => {
+    done(null, user)
+})
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve('public')))
@@ -43,7 +79,6 @@ app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
 app.use('/api/review', reviewRoutes)
 app.use('/api/board', boardRoutes)
-console.log('boardRoutes:', boardRoutes)
 
 setupSocketAPI(server)
 

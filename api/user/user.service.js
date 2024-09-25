@@ -98,10 +98,10 @@ async function add(user) {
 	try {
 		// peek only updatable fields!
 		const userToAdd = {
-			username: user.username,
+			username: user.username || user.email,
 			password: user.password,
-			fullname: user.fullname,
-			imgUrl: user.imgUrl,
+			fullname: user.fullname || user.name,
+			imgUrl: user.imgUrl || user.picture,
 			isAdmin: user.isAdmin,
 			score: 100,
 		}

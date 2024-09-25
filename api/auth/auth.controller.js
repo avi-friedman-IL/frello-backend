@@ -17,6 +17,22 @@ export async function login(req, res) {
 	}
 }
 
+export async function googleLogin(req, res) {
+	const { token } = req.body
+    try {
+        const user = await authService.googleLogin(token)
+        const loginToken = authService.getLoginToken(user)
+        
+        logger.info('User login: ', user)
+        res.cookie('loginToken', loginToken)
+
+        res.json(user)
+	} catch (err) {
+		logger.error('Failed to Login ' + err)
+		res.status(401).send({ err: 'Failed to Login' })
+	}
+}
+
 export async function signup(req, res) {
 	try {
 		const credentials = req.body

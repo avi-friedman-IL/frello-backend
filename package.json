@@ -18,7 +18,12 @@
         "cors": "^2.8.5",
         "cryptr": "^6.0.3",
         "express": "^4.17.1",
+        "express-session": "^1.18.0",
+        "follow-redirects": "^1.15.9",
+        "google-auth-library": "^9.14.1",
         "mongodb": "^6.8.1",
+        "passport": "^0.7.0",
+        "passport-google-oauth20": "^2.0.0",
         "socket.io": "^4.7.5"
     },
     "devDependencies": {
