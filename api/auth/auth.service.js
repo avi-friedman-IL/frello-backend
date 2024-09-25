@@ -5,7 +5,7 @@ import { OAuth2Client } from 'google-auth-library'
 import { userService } from '../user/user.service.js'
 import { logger } from '../../services/logger.service.js'
 const client = new OAuth2Client(
-    '922679906339-r3kj2mljtkelfcijme0kmclt1al1nfrk.apps.googleusercontent.com'
+    process.env.GOOGLE_CLIENT_ID 
 )
 const cryptr = new Cryptr(process.env.SECRET || 'Secret-Puk-1234')
 
@@ -31,7 +31,7 @@ async function login(username, password) {
 async function googleLogin(token) {
     const ticket = await client.verifyIdToken({
         idToken: token,
-        audience:process.env.CLIENT_ID,  // Specify the CLIENT_ID of the app that accesses the backend
+        audience: process.env.GOOGLE_CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
     })
     const payload = ticket.getPayload()
     const users = await userService.query()
@@ -48,7 +48,6 @@ async function googleLogin(token) {
         }
         await userService.add(newUser)
     }
-
 
     return { sub, email, name, picture }
 }

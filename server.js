@@ -5,6 +5,8 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import session from 'express-session'
 import passport from 'passport'
+import dotenv from 'dotenv';
+dotenv.config();
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 
 import { authRoutes } from './api/auth/auth.routes.js'
@@ -14,7 +16,6 @@ import { boardRoutes } from './api/board/board.routes.js'
 import { setupSocketAPI } from './services/socket.service.js'
 
 import { setupAsyncLocalStorage } from './middlewares/setupAls.middleware.js'
-
 const app = express()
 const server = http.createServer(app)
 
@@ -36,8 +37,8 @@ app.use(passport.session())
 passport.use(
     new GoogleStrategy(
         {
-            clientID: process.env.CLIENT_ID,
-            clientSecret: process.env.CLIENT_SECRET,
+            clientID: process.env.GOOGLE_CLIENT_ID,
+            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
             callbackURL: 'http://localhost:5173/auth/google/callback',
         },
         (accessToken, refreshToken, profile, done) => {
