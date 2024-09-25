@@ -33,18 +33,18 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
-passport.use(
-    new GoogleStrategy(
-        {
-            clientID:'922679906339-r3kj2mljtkelfcijme0kmclt1al1nfrk.apps.googleusercontent.com',
-            clientSecret: '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',
-            callbackURL: 'http://localhost:5173/auth/google/callback',
-        },
-        (accessToken, refreshToken, profile, done) => {
-            return done(null, profile)
-        }
-    )
-)
+// passport.use(
+//     new GoogleStrategy(
+//         {
+//             clientID:'922679906339-r3kj2mljtkelfcijme0kmclt1al1nfrk.apps.googleusercontent.com',
+//             clientSecret: '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',
+//             callbackURL: 'http://localhost:5173/auth/google/callback',
+//         },
+//         (accessToken, refreshToken, profile, done) => {
+//             return done(null, profile)
+//         }
+//     )
+// )
 
 passport.serializeUser((user, done) => {
     done(null, user)
