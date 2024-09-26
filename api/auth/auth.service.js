@@ -4,9 +4,7 @@ import { OAuth2Client } from 'google-auth-library'
 
 import { userService } from '../user/user.service.js'
 import { logger } from '../../services/logger.service.js'
-const client = new OAuth2Client(
-    process.env.GOOGLE_CLIENT_ID 
-)
+const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID)
 const cryptr = new Cryptr(process.env.SECRET || 'Secret-Puk-1234')
 
 export const authService = {

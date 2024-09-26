@@ -5,8 +5,8 @@ import express from 'express'
 import cookieParser from 'cookie-parser'
 import session from 'express-session'
 import passport from 'passport'
-import dotenv from 'dotenv';
-dotenv.config();
+import dotenv from 'dotenv'
+dotenv.config()
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 
 import { authRoutes } from './api/auth/auth.routes.js'
@@ -34,26 +34,26 @@ app.use(
 app.use(passport.initialize())
 app.use(passport.session())
 
-passport.use(
-    new GoogleStrategy(
-        {
-            clientID: process.env.GOOGLE_CLIENT_ID,
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-            callbackURL: 'http://localhost:5173/auth/google/callback',
-        },
-        (accessToken, refreshToken, profile, done) => {
-            return done(null, profile)
-        }
-    )
-)
+// passport.use(
+//     new GoogleStrategy(
+//         {
+//             clientID: process.env.GOOGLE_CLIENT_ID,
+//             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+//             callbackURL: 'http://localhost:5173/auth/google/callback',
+//         },
+//         (accessToken, refreshToken, profile, done) => {
+//             return done(null, profile)
+//         }
+//     )
+// )
 
-passport.serializeUser((user, done) => {
-    done(null, user)
-})
+// passport.serializeUser((user, done) => {
+//     done(null, user)
+// })
 
-passport.deserializeUser((user, done) => {
-    done(null, user)
-})
+// passport.deserializeUser((user, done) => {
+//     done(null, user)
+// })
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.resolve('public')))
