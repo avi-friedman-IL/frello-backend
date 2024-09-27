@@ -7,6 +7,8 @@ import session from 'express-session'
 import passport from 'passport'
 import dotenv from 'dotenv'
 dotenv.config()
+import MongoStore from 'connect-mongo';
+
 import { Strategy as GoogleStrategy } from 'passport-google-oauth20'
 
 import { authRoutes } from './api/auth/auth.routes.js'
@@ -33,6 +35,26 @@ app.use(
 
 app.use(passport.initialize())
 app.use(passport.session())
+
+
+// הגדרת session middleware עם MongoStore
+// app.use(
+//   session({
+//     secret: process.env.SESSION_SECRET, // מחרוזת סודית להצפנה
+//     resave: false, // לא לשמור סשן אם לא נעשה שינוי
+//     saveUninitialized: false, // לא לשמור סשנים ריקים
+//     store: MongoStore.create({
+//       mongoUrl: process.env.MONGO_CONNECTION, // חיבור למסד נתונים של MongoDB
+//       ttl: 14 * 24 * 60 * 60, // זמן חיי הסשן (14 ימים לדוגמה)
+//       autoRemove: 'native', // מאפשר לנקות סשנים שפגו תוקף בצורה אוטומטית
+//     }),
+//     cookie: {
+//       secure: process.env.NODE_ENV === 'production', // אם ב-Production, נשתמש בקוקי מאובטח
+//       maxAge: 1000 * 60 * 60 * 24 * 14, // משך חיי הקוקי (14 ימים)
+//     },
+//   })
+// );
+
 
 // passport.use(
 //     new GoogleStrategy(
