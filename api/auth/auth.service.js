@@ -32,10 +32,10 @@ async function googleLogin(token) {
         audience: process.env.GOOGLE_CLIENT_ID, // Specify the CLIENT_ID of the app that accesses the backend
     })
     const payload = ticket.getPayload()
-    console.log('payload:', payload)
-    const users = await userService.query()
+     const users = await userService.query()
     const user = users.find(u => u.username === payload.email || u.email === payload.email)
-    const { sub, email, name, picture } = payload
+    if (user) user._id = user._id.toString()
+    const { sub, email, name, picture, hashing } = payload
     if (!user) {
         const newUser = {
             username: email,
@@ -46,9 +46,10 @@ async function googleLogin(token) {
             email: email,
         }
         await userService.add(newUser)
+        return newUser
     }
 
-    return { sub, email, name, picture }
+    return user
 }
 
 async function signup({ username, password, fullname, imgUrl, isAdmin }) {

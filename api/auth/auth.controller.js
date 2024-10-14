@@ -25,7 +25,7 @@ export async function googleLogin(req, res) {
 
     logger.info('User login: ', user)
     res.cookie('loginToken', loginToken)
-
+    console.log('user:', user)
     res.json(user)
   } catch (err) {
     logger.error('Failed to Login ' + err)
