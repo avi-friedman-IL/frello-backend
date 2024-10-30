@@ -4,9 +4,6 @@ const mongoId = ObjectId.createFromHexString
 import { logger } from '../../services/logger.service.js'
 import { makeId } from '../../services/util.service.js'
 import { dbService } from '../../services/db.service.js'
-import { asyncLocalStorage } from '../../services/als.service.js'
-
-const PAGE_SIZE = 3
 
 export const boardService = {
    remove,
@@ -19,18 +16,12 @@ export const boardService = {
 }
 
 async function query(filterBy = { txt: '' }) {
-   // if (!filterBy.createdBy) return
-
    try {
       const criteria = _buildCriteria(filterBy)
       const sort = _buildSort(filterBy)
 
       const collection = await dbService.getCollection('board')
       var boardCursor = await collection.find(criteria, { sort })
-
-      // if (filterBy.pageIdx !== undefined) {
-      //     boardCursor.skip(filterBy.pageIdx * PAGE_SIZE).limit(PAGE_SIZE)
-      // }
 
       const boards = boardCursor.toArray()
 
@@ -117,9 +108,6 @@ async function getById(boardId, filterBy) {
 }
 
 async function remove(boardId) {
-   // const { loggedinUser } = asyncLocalStorage.getStore()
-   // const { _id: ownerId, isAdmin } = loggedinUser
-
    try {
       const criteria = {
          _id: mongoId(boardId),
@@ -138,12 +126,6 @@ async function remove(boardId) {
 }
 
 async function add(board) {
-   const loggedinUser = asyncLocalStorage.getStore().loggedinUser
-   board.createdBy = {
-      _id: loggedinUser._id,
-      fullname: loggedinUser.fullname,
-      imgUrl: loggedinUser.imgUrl,
-   }
    try {
       const collection = await dbService.getCollection('board')
       await collection.insertOne(board)
@@ -205,9 +187,11 @@ function _buildCriteria(filterBy) {
       const txtCriteria = { $regex: filterBy.txt, $options: 'i' }
       criteria.$or = [{ title: txtCriteria }, { description: txtCriteria }]
    }
-   // if (filterBy.userId) {
-   //   criteria['createdBy._id'] = filterBy.userId
-   // }
+   if (filterBy.createdBy) {
+      criteria['createdBy._id'] = filterBy.createdBy._id
+   } else {
+      criteria['createdBy'] = null
+   }
 
    return criteria
 }

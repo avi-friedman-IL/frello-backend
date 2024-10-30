@@ -36,8 +36,7 @@ export async function getBoardById(req, res) {
 }
 
 export async function addBoard(req, res) {
-   const { body: board, loggedinUser } = req
-   console.log('loggedinUser:', loggedinUser)
+   const { body: board } = req
    try {
       // board.owner = loggedinUser
       const addedBoard = await boardService.add(board)
