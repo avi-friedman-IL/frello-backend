@@ -188,7 +188,10 @@ function _buildCriteria(filterBy) {
       criteria.$or = [{ title: txtCriteria }, { description: txtCriteria }]
    }
    if (filterBy.createdBy) {
-      criteria['createdBy._id'] = filterBy.createdBy._id
+      criteria.$or = [
+         { 'createdBy._id': filterBy.createdBy._id },
+         { 'members._id': filterBy.createdBy._id }
+      ]
    } else {
       criteria['createdBy'] = null
    }
